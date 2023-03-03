@@ -5,13 +5,13 @@ export default function Card(props) {
         <div className="card">
             <img className="card--image"></img>
             <div className="card--stats">
-                <img className="card--star"></img>
-                <span>5.0</span>
-                <span className="gray">(6) </span>
-                <span className="gray">USA</span>
+                <img className="card--star" src={props.img}></img>
+                <span>{props.rating}</span>
+                <span className="gray">({props.votes}) </span>
+                <span className="gray">{props.country}</span>
             </div>
-            <p>Life Lessons with Katie Zaferes</p>
-            <p><span className="bold">From $136 / person</span></p>
+            <p>{props.name}</p>
+            <p><span className="bold">{props.cost}</span></p>
         </div>
     )
 }

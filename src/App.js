@@ -16,6 +16,12 @@ export default function App() {
       />
       <Hero />
       <Card 
+        img=""
+        name="Something Something"
+        rating={5}
+        votes={6}
+        cost={136}
+        country="USA"
 
       />
       <h1> App Component </h1>

@@ -1,14 +1,15 @@
 import React from "react";
+import jokesData from "./../data/jokesData"
+import Joke from "../components/Joke"
 
-export default function Prop(props) {
+export default function Prop() {
+    const jokeElements = jokesData.map((x, index) => {
+        return <Joke setup={x.setup} punchline={x.punchline} key={index}/>
+            })
     return (
-        <div> 
-            {props.img && <img src={props.img}/>}
-            <img src={'../images/${props.img}'}/>
-            <h3> {props.name} </h3>
-            <p> {props.number} </p>
-            <p> {props.email} </p>
-        </div>
+            <div className="prop--jokes">
+                {jokeElements}
+            </div>
     )
 }
 
